@@ -1,5 +1,6 @@
 import { assoc, compose, curry, keys, last, reduce, replace, toUpper } from 'ramda'
 
+// lastToUpper :: [String] -> String
 const lastToUpper = compose(toUpper, last)
 
 // snakeToCamelCase :: String -> String
