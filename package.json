@@ -1,0 +1,19 @@
+{
+  "name": "major-key",
+  "version": "0.1.0",
+  "description": "tools for smooshing objects",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jongold/major-key.git"
+  },
+  "author": "Jon Gold",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jongold/major-key/issues"
+  },
+  "homepage": "https://github.com/jongold/major-key#readme"
+}
