@@ -2,7 +2,7 @@
   "name": "major-key",
   "version": "1.0.1",
   "description": "tools for smooshing objects",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "babel -d ./dist index.js",
     "prepublish": "npm run build",
