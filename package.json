@@ -1,6 +1,6 @@
 {
   "name": "major-key",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "tools for smooshing objects",
   "main": "dist/index.js",
   "scripts": {
