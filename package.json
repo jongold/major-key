@@ -4,6 +4,8 @@
   "description": "tools for smooshing objects",
   "main": "index.js",
   "scripts": {
+    "build": "babel -d ./dist index.js",
+    "prepublish": "npm run build",
     "test": "standard && jest"
   },
   "repository": {
