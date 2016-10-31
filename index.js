@@ -1,4 +1,7 @@
-import { assoc, compose, curry, keys, last, reduce, replace, toUpper } from 'ramda'
+import { assoc, compose, curry, is, keys, last, reduce, replace, toUpper } from 'ramda'
+
+// isObject :: * -> Boolean
+const isObject = is(Object)
 
 // lastToUpper :: [String] -> String
 const lastToUpper = compose(toUpper, last)
@@ -11,9 +14,12 @@ const kebabToCamelCase = replace(/-\w/g, lastToUpper)
 
 // transformKeys :: (k -> k) -> { k: v } -> { k: v }
 export const transformKeys = curry((fn, obj) =>
-  reduce((acc, key) =>
-    assoc(fn(key), obj[key], acc)
-  , {}, keys(obj))
+  reduce((acc, key) => {
+    if (isObject(obj[key])) {
+      return assoc(fn(key), transformKeys(fn, obj[key]), acc)
+    }
+    return assoc(fn(key), obj[key], acc)
+  }, {}, keys(obj))
 )
 
 // kebabToCamelCaseKeys :: { k: v } -> { k: v }
